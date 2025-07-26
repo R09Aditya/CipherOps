@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CipherOps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="cypher.ico">
+
+</head>
+<body class="bg-[url('bg.jpg')] bg-no-repeat bg-cover">
+    <div class="bg-cover flex justify-center">
+    <div id="nav" class="flex w-50 font-bold text-xl w-[160vh] rounded-lg flex justify-between items center bg-white bg-opacity-50 text-white p-6 border-radius: 200px items-center">
+        <a href="index.html"><img src="logonavbg.png" alt="" class="h-20"></a>
+        <div id="nav" class="w-[400px] flex justify-between">
+            <a href="index.html"><span>Home</span></a>
+            <a href="tools.html"><span>Tools</span></a>
+            <a href="contact.html"><span>Contact Us</span></a>
+        </div>
+    </div>
+    </div>
+<div class="bg-cover flex justify-center">
+    <div class="mt-[200px] w-[150vh] rounded-lg justify-center bg-white bg-opacity-50 text-white p-6 border-radius: 200px align-self: center;">
+
+<div style="display: flex;
+            justify-content: space-between;">
+        <button id="reccb" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+  🧠 Reconnaissance
+</button>
+
+
+<button id="expb" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+   💣 Exploitation
+</button>
+
+
+
+<button id="pexpb" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+  🧾 Post-Exploitation
+</button>
+
+
+
+
+<button id="creb" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+  🔐 Credential Attacks
+</button>
+
+
+<button id="webb" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+ 🌐 Web/App Testing
+</button>
+
+
+</div>
+<div class="w-full flex justify-center">
+<div id="exp" class="hidden mt-4 p-4">
+    <table class="border-black border-2">
+ <tr class="border-black border-2"><th>Tool</th><th class="border-black border-2">Description</th></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">Mimikatz</td><td class="border-black border-2">Dumping Windows credentials</td></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">Empire</td><td class="border-black border-2">PowerShell/C2 post-exploitation framework</td></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">Cobalt Strike</td><td class="border-black border-2">Advanced red teaming & C2 (paid)</td></tr>
+</table>
+</div>
+
+
+<div id="pexp" class="hidden mt-4 p-4">
+<table>
+  <tr class="border-black border-2"><th>Tool</th><th>Description</th></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">Hydra</td><td class="border-black border-2">Brute-force login cracker</td></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">John the Ripper</td><td class="border-black border-2">Password hash cracker</td></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">Hashcat</td><td class="border-black border-2">GPU-powered hash cracking</td></tr>
+</table>
+</div>
+
+
+<div id="cre" class="hidden mt-4 p-4">
+<table>
+  <tr class="border-black border-2"><th>Tool</th><th>Description</th></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">Burp Suite</td><td class="border-black border-2">Web vulnerability scanner & proxy</td></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">OWASP ZAP</td><td class="border-black border-2">Free alternative to Burp Suite</td></tr>
+</table>
+</div>
+
+<div id="web" class="hidden mt-4 p-4">
+<table>
+  <tr class="border-black border-2"><th>Tool</th><th>Description</th></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">Burp Suite</td><td class="border-black border-2">Web vulnerability scanner & proxy</td></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">OWASP ZAP</td><td class="border-black border-2">Free alternative to Burp Suite</td></tr>
+</table>
+</div>
+
+<div id="recc" class="hidden mt-4 p-4">
+<table>
+  <tr class="border-black border-2"><th>Tool</th><th>Description</th></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">Metasploit Framework</td><td class="border-black border-2">All-in-one exploitation toolkit</td></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">SQLMap</td><td class="border-black border-2">Automated SQL injection exploitation</td></tr>
+  <tr class="border-black border-2"><td class="border-black border-2">BeEF</td><td class="border-black border-2">Exploiting browser vulnerabilities</td></tr>
+</table>
+</div>
+
+</div>
+    </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const reccb = document.getElementById('reccb');
+    const recc = document.getElementById('recc');
+
+    reccb.addEventListener('click', function() {
+      recc.classList.toggle('hidden');
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const expb = document.getElementById('expb');
+    const exp = document.getElementById('exp');
+
+    expb.addEventListener('click', function() {
+      exp.classList.toggle('hidden');
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const pexpb = document.getElementById('pexpb');
+    const pexp = document.getElementById('pexp');
+
+    pexpb.addEventListener('click', function() {
+      pexp.classList.toggle('hidden');
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const creb = document.getElementById('creb');
+    const cre = document.getElementById('cre');
+
+    creb.addEventListener('click', function() {
+      cre.classList.toggle('hidden');
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const webb = document.getElementById('webb');
+    const web = document.getElementById('web');
+
+    webb.addEventListener('click', function() {
+      web.classList.toggle('hidden');
+    });
+  });
+
+
+
+</script>
+</body>
+</html>
